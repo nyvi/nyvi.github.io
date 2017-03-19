@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Maven,Eclipse," />
 
 
 
@@ -89,15 +89,27 @@
 
 
 
-<meta name="description" content="所有的进步都是不稳定, 一个问题解决了 又不得不面对一个新的问题">
-<meta property="og:type" content="website">
-<meta property="og:title" content="NYVI的技术博客">
-<meta property="og:url" content="http://nyvi.github.io/index.html">
+<meta name="description" content="WhyEclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。
+How下载从Apache官网下载最新版的Maven，并解压到安装目录。
+配置配置阿里的Maven库,
+配置settings.xml修改 conf 下的settings.xml:12345678910111213141516171819202">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Eclipse配置Maven仓库">
+<meta property="og:url" content="http://nyvi.github.io/2017/03/18/Eclipse配置Maven仓库/index.html">
 <meta property="og:site_name" content="NYVI的技术博客">
-<meta property="og:description" content="所有的进步都是不稳定, 一个问题解决了 又不得不面对一个新的问题">
+<meta property="og:description" content="WhyEclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。
+How下载从Apache官网下载最新版的Maven，并解压到安装目录。
+配置配置阿里的Maven库,
+配置settings.xml修改 conf 下的settings.xml:12345678910111213141516171819202">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3612970-c948bcdff3afadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-19T07:32:32.022Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NYVI的技术博客">
-<meta name="twitter:description" content="所有的进步都是不稳定, 一个问题解决了 又不得不面对一个新的问题">
+<meta name="twitter:title" content="Eclipse配置Maven仓库">
+<meta name="twitter:description" content="WhyEclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。
+How下载从Apache官网下载最新版的Maven，并解压到安装目录。
+配置配置阿里的Maven库,
+配置settings.xml修改 conf 下的settings.xml:12345678910111213141516171819202">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3612970-c948bcdff3afadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -125,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://nyvi.github.io/"/>
+  <link rel="canonical" href="http://nyvi.github.io/2017/03/18/Eclipse配置Maven仓库/"/>
 
 
 
 
 
-  <title> NYVI的技术博客 </title>
+  <title> Eclipse配置Maven仓库 | NYVI的技术博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -167,9 +179,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -306,9 +316,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -338,10 +348,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/18/Eclipse配置Maven仓库/" itemprop="url">
-                  Eclipse配置Maven仓库
-                </a>
+                Eclipse配置Maven仓库
               
             
           </h1>
@@ -392,55 +399,88 @@
       
 
       
+        <h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p>Eclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。</p>
+<h2 id="How"><a href="#How" class="headerlink" title="How"></a>How</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>从<a href="http://maven.apache.org/download.cgi" target="_blank" rel="external">Apache官网</a>下载最新版的Maven，并解压到安装目录。</p>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>配置阿里的Maven库,</p>
+<h4 id="配置settings-xml"><a href="#配置settings-xml" class="headerlink" title="配置settings.xml"></a>配置settings.xml</h4><p>修改 conf 下的settings.xml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;localRepository&gt;E:/Repository&lt;/localRepository&gt;</div><div class="line">&lt;profiles&gt;</div><div class="line">  &lt;profile&gt;</div><div class="line">	&lt;id&gt;Nexus aliyun&lt;/id&gt;</div><div class="line">	&lt;repositories&gt;</div><div class="line">	  &lt;repository&gt;</div><div class="line">		&lt;id&gt;Nexus aliyun&lt;/id&gt;</div><div class="line">		&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</div><div class="line">		&lt;releases&gt;</div><div class="line">		   &lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		&lt;/releases&gt;</div><div class="line">		&lt;snapshots&gt;</div><div class="line">		   &lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		&lt;/snapshots&gt;</div><div class="line">	   &lt;/repository&gt;</div><div class="line">	&lt;/repositories&gt;</div><div class="line">	&lt;pluginRepositories&gt;</div><div class="line">		&lt;pluginRepository&gt;</div><div class="line">		  &lt;id&gt;Nexus aliyun&lt;/id&gt;</div><div class="line">		  &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</div><div class="line">		  &lt;releases&gt;</div><div class="line">			&lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		  &lt;/releases&gt;</div><div class="line">		  &lt;snapshots&gt;</div><div class="line">			&lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		  &lt;/snapshots&gt;</div><div class="line">		&lt;/pluginRepository&gt;</div><div class="line">	&lt;/pluginRepositories&gt;</div><div class="line">  &lt;/profile&gt;</div><div class="line">&lt;/profiles&gt;</div><div class="line">&lt;activeProfiles&gt;</div><div class="line">	&lt;activeProfile&gt;Nexus aliyun&lt;/activeProfile&gt;</div><div class="line">&lt;/activeProfiles&gt;</div></pre></td></tr></table></figure></p>
+<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><p>计算机右击属性-&gt;高级系统设置-&gt;环境变量<br>在系统变量下的Path添加 D:\develop\apache-maven-3.3.9\bin;</p>
+<h4 id="配置Eclipse"><a href="#配置Eclipse" class="headerlink" title="配置Eclipse"></a>配置Eclipse</h4><p>  Window-&gt;Preferences-&gt;Maven-&gt;User Settings</p>
+<p> <img src="http://upload-images.jianshu.io/upload_images/3612970-c948bcdff3afadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<h2 id="What"><a href="#What" class="headerlink" title="What"></a>What</h2><p> 从此之后妈妈再也不用担心我下载jar慢啦！！！</p>
+
+      
+    </div>
+
+    <div>
+      
         
-          
-          WhyEclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。
-How下载从Apache官网下载最新版的Maven，并解压到安装目录。
-配置配置阿里的Maven库,
-配置settings.xml修改 co
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/18/Eclipse配置Maven仓库/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+
+      
+    </div>
+
+    <div>
+      
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="NYVI WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/alipay.png" alt="NYVI Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Maven/" rel="tag"># Maven</a>
+          
+            <a href="/tags/Eclipse/" rel="tag"># Eclipse</a>
+          
+        </div>
+      
+
+      
+        
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -448,6 +488,12 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="uyan_frame"></div>
+    
+  </div>
+
 
         </div>
         
@@ -467,8 +513,17 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://odbp3s81c.bkt.clouddn.com/1.jpg"
@@ -539,6 +594,22 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Why"><span class="nav-number">1.</span> <span class="nav-text">Why</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How"><span class="nav-number">2.</span> <span class="nav-text">How</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">2.2.</span> <span class="nav-text">配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#配置settings-xml"><span class="nav-number">2.2.1.</span> <span class="nav-text">配置settings.xml</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置环境变量"><span class="nav-number">2.2.2.</span> <span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#配置Eclipse"><span class="nav-number">2.2.3.</span> <span class="nav-text">配置Eclipse</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#What"><span class="nav-number">3.</span> <span class="nav-text">What</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -643,6 +714,10 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
@@ -675,6 +750,10 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
   
     
 
+    
+      <!-- UY BEGIN -->
+      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2127603"></script>
+      <!-- UY END -->
     
   
 

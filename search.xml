@@ -3,9 +3,9 @@
   
     
     <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>%2F2017%2F03%2F16%2Fhello-world%2F</url>
-      <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <title><![CDATA[Eclipse配置Maven仓库]]></title>
+      <url>%2F2017%2F03%2F18%2FEclipse%E9%85%8D%E7%BD%AEMaven%E4%BB%93%E5%BA%93%2F</url>
+      <content type="text"><![CDATA[WhyEclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。 How下载从Apache官网下载最新版的Maven，并解压到安装目录。 配置配置阿里的Maven库, 配置settings.xml修改 conf 下的settings.xml:123456789101112131415161718192021222324252627282930313233&lt;localRepository&gt;E:/Repository&lt;/localRepository&gt;&lt;profiles&gt; &lt;profile&gt; &lt;id&gt;Nexus aliyun&lt;/id&gt; &lt;repositories&gt; &lt;repository&gt; &lt;id&gt;Nexus aliyun&lt;/id&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt; &lt;releases&gt; &lt;enabled&gt;true&lt;/enabled&gt; &lt;/releases&gt; &lt;snapshots&gt; &lt;enabled&gt;true&lt;/enabled&gt; &lt;/snapshots&gt; &lt;/repository&gt; &lt;/repositories&gt; &lt;pluginRepositories&gt; &lt;pluginRepository&gt; &lt;id&gt;Nexus aliyun&lt;/id&gt; &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt; &lt;releases&gt; &lt;enabled&gt;true&lt;/enabled&gt; &lt;/releases&gt; &lt;snapshots&gt; &lt;enabled&gt;true&lt;/enabled&gt; &lt;/snapshots&gt; &lt;/pluginRepository&gt; &lt;/pluginRepositories&gt; &lt;/profile&gt;&lt;/profiles&gt;&lt;activeProfiles&gt; &lt;activeProfile&gt;Nexus aliyun&lt;/activeProfile&gt;&lt;/activeProfiles&gt; 配置环境变量计算机右击属性-&gt;高级系统设置-&gt;环境变量在系统变量下的Path添加 D:\develop\apache-maven-3.3.9\bin; 配置Eclipse Window-&gt;Preferences-&gt;Maven-&gt;User Settings What 从此之后妈妈再也不用担心我下载jar慢啦！！！]]></content>
     </entry>
 
     
