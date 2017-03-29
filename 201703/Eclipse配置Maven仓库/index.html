@@ -101,15 +101,15 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
 How下载从Apache官网下载最新版的Maven，并解压到安装目录。
 配置配置阿里的Maven库,
 配置settings.xml修改 conf 下的settings.xml:12345678910111213141516171819202">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3612970-c948bcdff3afadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-03-19T07:32:32.022Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/3612970-c948bcdff3afadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-03-28T14:13:02.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Eclipse配置Maven仓库">
 <meta name="twitter:description" content="WhyEclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。
 How下载从Apache官网下载最新版的Maven，并解压到安装目录。
 配置配置阿里的Maven库,
 配置settings.xml修改 conf 下的settings.xml:12345678910111213141516171819202">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/3612970-c948bcdff3afadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/3612970-c948bcdff3afadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -377,6 +377,16 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/201703/Eclipse配置Maven仓库/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="201703/Eclipse配置Maven仓库/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -416,7 +426,7 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
 <h4 id="配置settings-xml"><a href="#配置settings-xml" class="headerlink" title="配置settings.xml"></a>配置settings.xml</h4><p>修改 conf 下的settings.xml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;localRepository&gt;E:/Repository&lt;/localRepository&gt;</div><div class="line">&lt;profiles&gt;</div><div class="line">  &lt;profile&gt;</div><div class="line">	&lt;id&gt;Nexus aliyun&lt;/id&gt;</div><div class="line">	&lt;repositories&gt;</div><div class="line">	  &lt;repository&gt;</div><div class="line">		&lt;id&gt;Nexus aliyun&lt;/id&gt;</div><div class="line">		&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</div><div class="line">		&lt;releases&gt;</div><div class="line">		   &lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		&lt;/releases&gt;</div><div class="line">		&lt;snapshots&gt;</div><div class="line">		   &lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		&lt;/snapshots&gt;</div><div class="line">	   &lt;/repository&gt;</div><div class="line">	&lt;/repositories&gt;</div><div class="line">	&lt;pluginRepositories&gt;</div><div class="line">		&lt;pluginRepository&gt;</div><div class="line">		  &lt;id&gt;Nexus aliyun&lt;/id&gt;</div><div class="line">		  &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</div><div class="line">		  &lt;releases&gt;</div><div class="line">			&lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		  &lt;/releases&gt;</div><div class="line">		  &lt;snapshots&gt;</div><div class="line">			&lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		  &lt;/snapshots&gt;</div><div class="line">		&lt;/pluginRepository&gt;</div><div class="line">	&lt;/pluginRepositories&gt;</div><div class="line">  &lt;/profile&gt;</div><div class="line">&lt;/profiles&gt;</div><div class="line">&lt;activeProfiles&gt;</div><div class="line">	&lt;activeProfile&gt;Nexus aliyun&lt;/activeProfile&gt;</div><div class="line">&lt;/activeProfiles&gt;</div></pre></td></tr></table></figure></p>
 <h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><p>计算机右击属性-&gt;高级系统设置-&gt;环境变量<br>在系统变量下的Path添加 D:\develop\apache-maven-3.3.9\bin;</p>
 <h4 id="配置Eclipse"><a href="#配置Eclipse" class="headerlink" title="配置Eclipse"></a>配置Eclipse</h4><p>  Window-&gt;Preferences-&gt;Maven-&gt;User Settings</p>
-<p> <img src="http://upload-images.jianshu.io/upload_images/3612970-c948bcdff3afadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
+<p> <img src="https://upload-images.jianshu.io/upload_images/3612970-c948bcdff3afadc6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Paste_Image.png"></p>
 <h2 id="What"><a href="#What" class="headerlink" title="What"></a>What</h2><p> 从此之后妈妈再也不用担心我下载jar慢啦！！！</p>
 
       
@@ -501,7 +511,12 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
           
   <div class="comments" id="comments">
     
-      <div id="uyan_frame"></div>
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
     
   </div>
 
@@ -743,36 +758,41 @@ How下载从Apache官网下载最新版的Maven，并解压到安装目录。
 
   
 
+    <script type="text/javascript">
+      var disqus_shortname = 'nyvi-github-io';
+      var disqus_identifier = '201703/Eclipse配置Maven仓库/';
+
+      var disqus_title = "Eclipse配置Maven仓库";
 
 
+      function run_disqus_script(disqus_script) {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
 
-	
+      run_disqus_script('count.js');
 
+      
+        var disqus_config = function () {
+            this.page.url = disqus_url;
+            this.page.identifier = disqus_identifier;
+            this.page.title = disqus_title;
+        };
+        run_disqus_script('embed.js');
+      
 
-
-
-
+    </script>
   
 
 
 
 
 
-  
-    
-
-    
-      <!-- UY BEGIN -->
-      <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2127603"></script>
-      <!-- UY END -->
-    
-  
 
 
-
-
-
-  
 
 
 
