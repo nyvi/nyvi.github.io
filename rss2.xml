@@ -8,8 +8,45 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>所有的进步都是不稳定, 一个问题解决了 &lt;br/&gt;又不得不面对一个新的问题</description>
-    <pubDate>Tue, 28 Mar 2017 14:13:02 GMT</pubDate>
+    <pubDate>Sat, 08 Apr 2017 05:22:53 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>SpringBoot之HelloWorld</title>
+      <link>http://nyvi.github.io/201704/SpringBoot%E4%B9%8BHelloWorld/</link>
+      <guid>http://nyvi.github.io/201704/SpringBoot%E4%B9%8BHelloWorld/</guid>
+      <pubDate>Sat, 08 Apr 2017 02:52:55 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;SpringBoot&quot;&gt;&lt;a href=&quot;#SpringBoot&quot; class=&quot;headerlink&quot; title=&quot;SpringBoot&quot;&gt;&lt;/a&gt;SpringBoot&lt;/h2&gt;&lt;p&gt;Spring 框架作为目前非常流行的一个 Java 应用开发框架，它所包含的
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h2><p>Spring 框架作为目前非常流行的一个 Java 应用开发框架，它所包含的内容是非常繁多的。Spring 框架包含几十个不同的子项目，涵盖应用开发的不同方面。要在这些子项目之间进行选择，并快速搭建一个可以运行的应用是比较困难的事情。Spring Boot 的目的在于快速创建可以独立运行的 Spring 应用。通过 Spring Boot 可以根据相应的模板快速创建应用并运行。Spring Boot 可以自动配置 Spring 的各种组件，并不依赖代码生成和 XML 配置文件。Spring Boot 可以大大提升使用 Spring 框架时的开发效率。</p>
+<h2 id="中心思想"><a href="#中心思想" class="headerlink" title="中心思想"></a>中心思想</h2><p>约定优于配置</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
+<li>创建独立的Spring应用程序</li>
+<li>直接嵌入 Tomcat 或 Jetty 服务器，不需要部署 WAR 文件。</li>
+<li>提供推荐的基础 POM 文件来简化 Maven 配置。</li>
+<li>尽可能的根据项目依赖来自动配置 Spring 框架。</li>
+<li>提供可以直接在生产环境中使用的功能，如性能指标、应用信息和应用健康检查。</li>
+<li>没有代码生成，也没有 XML 配置文件。</li>
+</ul>
+<h2 id="写一个HelloWorld"><a href="#写一个HelloWorld" class="headerlink" title="写一个HelloWorld"></a>写一个HelloWorld</h2><ol>
+<li>创建一个maven项目</li>
+<li><p>在pom.xml文件添加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 </div><div class="line">		 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;com.springboot&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;springboot&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line"></div><div class="line">    &lt;parent&gt;</div><div class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</div><div class="line">        &lt;version&gt;1.5.2.RELEASE&lt;/version&gt;</div><div class="line">    &lt;/parent&gt;</div><div class="line">    &lt;dependencies&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">    &lt;/dependencies&gt;</div><div class="line">    </div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>创建程序入口</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">package com.springboot;</div><div class="line"></div><div class="line">import org.springframework.boot.SpringApplication;</div><div class="line">import org.springframework.boot.autoconfigure.SpringBootApplication;</div><div class="line">import org.springframework.web.bind.annotation.RequestMapping;</div><div class="line">import org.springframework.web.bind.annotation.RestController;</div><div class="line"></div><div class="line">@RestController</div><div class="line">@SpringBootApplication</div><div class="line">public class Application &#123;</div><div class="line"></div><div class="line">    @RequestMapping(&quot;/&quot;)</div><div class="line">    String helloWorld() &#123;</div><div class="line">        return &quot;Hello World!&quot;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        SpringApplication.run(Application.class, args);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>见证奇迹的时刻<br>右击运行 Application 程序<br>浏览器输入:<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> 就会输出 Hello World!</p>
+</li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://nyvi.github.io/201704/SpringBoot%E4%B9%8BHelloWorld/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Eclipse配置Maven仓库</title>
