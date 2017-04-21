@@ -4,7 +4,7 @@
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>NYVI的技术博客</title>
-    <link>http://nyvi.github.io/</link>
+    <link>http://www.enheng.cc/</link>
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>所有的进步都是不稳定, 一个问题解决了 &lt;br/&gt;又不得不面对一个新的问题</description>
@@ -13,20 +13,20 @@
     
     <item>
       <title>SpringBoot</title>
-      <link>http://nyvi.github.io/201704/SpringBoot/</link>
-      <guid>http://nyvi.github.io/201704/SpringBoot/</guid>
+      <link>http://www.enheng.cc/201704/SpringBoot/</link>
+      <guid>http://www.enheng.cc/201704/SpringBoot/</guid>
       <pubDate>Sat, 15 Apr 2017 01:52:55 GMT</pubDate>
       <description>
       
       </description>
       
-      <comments>http://nyvi.github.io/201704/SpringBoot/#disqus_thread</comments>
+      <comments>http://www.enheng.cc/201704/SpringBoot/#disqus_thread</comments>
     </item>
     
     <item>
       <title>SpringBoot之lombok</title>
-      <link>http://nyvi.github.io/201704/SpringBoot%E4%B9%8Blombok/</link>
-      <guid>http://nyvi.github.io/201704/SpringBoot%E4%B9%8Blombok/</guid>
+      <link>http://www.enheng.cc/201704/SpringBoot%E4%B9%8Blombok/</link>
+      <guid>http://www.enheng.cc/201704/SpringBoot%E4%B9%8Blombok/</guid>
       <pubDate>Sun, 09 Apr 2017 11:52:55 GMT</pubDate>
       <description>
       
@@ -56,13 +56,13 @@
 <p>接下就可以尽情体验lombok带来的便利了。</p>
 ]]></content:encoded>
       
-      <comments>http://nyvi.github.io/201704/SpringBoot%E4%B9%8Blombok/#disqus_thread</comments>
+      <comments>http://www.enheng.cc/201704/SpringBoot%E4%B9%8Blombok/#disqus_thread</comments>
     </item>
     
     <item>
       <title>SpringBoot之HelloWorld</title>
-      <link>http://nyvi.github.io/201704/SpringBoot%E4%B9%8BHelloWorld/</link>
-      <guid>http://nyvi.github.io/201704/SpringBoot%E4%B9%8BHelloWorld/</guid>
+      <link>http://www.enheng.cc/201704/SpringBoot%E4%B9%8BHelloWorld/</link>
+      <guid>http://www.enheng.cc/201704/SpringBoot%E4%B9%8BHelloWorld/</guid>
       <pubDate>Sat, 08 Apr 2017 02:52:55 GMT</pubDate>
       <description>
       
@@ -93,13 +93,13 @@
 </ol>
 ]]></content:encoded>
       
-      <comments>http://nyvi.github.io/201704/SpringBoot%E4%B9%8BHelloWorld/#disqus_thread</comments>
+      <comments>http://www.enheng.cc/201704/SpringBoot%E4%B9%8BHelloWorld/#disqus_thread</comments>
     </item>
     
     <item>
       <title>Eclipse配置Maven仓库</title>
-      <link>http://nyvi.github.io/201703/Eclipse%E9%85%8D%E7%BD%AEMaven%E4%BB%93%E5%BA%93/</link>
-      <guid>http://nyvi.github.io/201703/Eclipse%E9%85%8D%E7%BD%AEMaven%E4%BB%93%E5%BA%93/</guid>
+      <link>http://www.enheng.cc/201703/Eclipse%E9%85%8D%E7%BD%AEMaven%E4%BB%93%E5%BA%93/</link>
+      <guid>http://www.enheng.cc/201703/Eclipse%E9%85%8D%E7%BD%AEMaven%E4%BB%93%E5%BA%93/</guid>
       <pubDate>Sat, 18 Mar 2017 15:00:16 GMT</pubDate>
       <description>
       
@@ -117,7 +117,7 @@
 <h2 id="What"><a href="#What" class="headerlink" title="What"></a>What</h2><p> 从此之后妈妈再也不用担心我下载jar慢啦！！！</p>
 ]]></content:encoded>
       
-      <comments>http://nyvi.github.io/201703/Eclipse%E9%85%8D%E7%BD%AEMaven%E4%BB%93%E5%BA%93/#disqus_thread</comments>
+      <comments>http://www.enheng.cc/201703/Eclipse%E9%85%8D%E7%BD%AEMaven%E4%BB%93%E5%BA%93/#disqus_thread</comments>
     </item>
     
   </channel>
