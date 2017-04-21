@@ -8,8 +8,20 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>所有的进步都是不稳定, 一个问题解决了 &lt;br/&gt;又不得不面对一个新的问题</description>
-    <pubDate>Mon, 10 Apr 2017 13:20:23 GMT</pubDate>
+    <pubDate>Sat, 15 Apr 2017 01:41:07 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>SpringBoot之lombok</title>
+      <link>http://nyvi.github.io/201704/SpringBoot/</link>
+      <guid>http://nyvi.github.io/201704/SpringBoot/</guid>
+      <pubDate>Sat, 15 Apr 2017 01:52:55 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://nyvi.github.io/201704/SpringBoot/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>SpringBoot之lombok</title>

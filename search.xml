@@ -4,6 +4,13 @@
     
     <entry>
       <title><![CDATA[SpringBoot之lombok]]></title>
+      <url>%2F201704%2FSpringBoot%2F</url>
+      <content type="text"></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[SpringBoot之lombok]]></title>
       <url>%2F201704%2FSpringBoot%E4%B9%8Blombok%2F</url>
       <content type="text"><![CDATA[简介虽然Lombok也用到了注解，但是它并没有用到反射，而是通过一些奇淫巧技，在代码编译时期动态将注解替换为具体的代码。所以JVM实际运行的代码，和我们手动编写的包含了各种工具方法的类相同。 注解介绍 val - 终级解决方案！简化 final 局部变量定义。 @NonNull - 或者：了解我是怎样停止担心并爱上 NullPointerException 的。 @Cleanup - 怎么资源管理：方便而安全地调用 close() 方法。 @Getter / @Setter - 不再需要写像 public int getFoo() {return foo;} 这样的代码。 @ToString - 不用启动debug就能观察字段值：让 Lombok 为你生成 toString！ @EqualsAndHashCode - 让equal变得容易：在项目中由字段实现 hashCode 和 equals。 @NoArgsConstructor, @RequiredArgsConstructor and @AllArgsConstructor - 定制构造器：生成无参构造函数，对每个 final/非空 字段产生构造器，全参构造函数。 @Data - 它合并所有注解：相当于对所有字段应用 @ToString、@EqualsAndHashCode、@Getter，并对所有非 final 字段应用 @Setter，以及应用 @RequiredArgsConstructor！ @Value - 简单创意不可变类。 @Builder - … 一切都很简单：简单直接地创建对象的 API！ @SneakyThrows - 大胆的抛出以前不能轻易抛出的异常！ @Synchronized - 正确的同步：不要暴露你的锁。 @Getter(lazy=true) - 懒加载是种美德！ @Log - 打印log也是一种美德！ 安装IDEA安装lombok插件很简单File-&gt;Setting-&gt;Plugins-&gt;Browse repositories… 搜索lombok然后点击Install就OK了。 导包1234&lt;dependency&gt; &lt;groupId&gt;org.projectlombok&lt;/groupId&gt; &lt;artifactId&gt;lombok&lt;/artifactId&gt;&lt;/dependency&gt; 接下就可以尽情体验lombok带来的便利了。]]></content>
     </entry>
