@@ -3,24 +3,38 @@
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>NYVI的技术博客</title>
+    <title>NYVI的博客</title>
     <link>http://www.enheng.cc/</link>
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>所有的进步都是不稳定, 一个问题解决了 &lt;br/&gt;又不得不面对一个新的问题</description>
-    <pubDate>Fri, 21 Apr 2017 12:53:35 GMT</pubDate>
+    <pubDate>Sat, 03 Jun 2017 04:12:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>SpringBoot</title>
-      <link>http://www.enheng.cc/201704/SpringBoot/</link>
-      <guid>http://www.enheng.cc/201704/SpringBoot/</guid>
-      <pubDate>Sat, 15 Apr 2017 01:52:55 GMT</pubDate>
+      <title>CentOS安装JDK</title>
+      <link>http://www.enheng.cc/201705/CentOS%E5%AE%89%E8%A3%85JDK/</link>
+      <guid>http://www.enheng.cc/201705/CentOS%E5%AE%89%E8%A3%85JDK/</guid>
+      <pubDate>Tue, 23 May 2017 12:52:55 GMT</pubDate>
       <description>
+      
+        &lt;p&gt;本想安安静静的做一个开发攻城狮的，但事与愿违，兼职干运维。&lt;br&gt;身为一个Java攻城狮运维第一步必须要从装JDK开始。&lt;/p&gt;
+&lt;h2 id=&quot;源码包准备&quot;&gt;&lt;a href=&quot;#源码包准备&quot; class=&quot;headerlink&quot; title=&quot;源码包准备&quot;&gt;&lt;/a&gt;源码包
       
       </description>
       
-      <comments>http://www.enheng.cc/201704/SpringBoot/#disqus_thread</comments>
+      <content:encoded><![CDATA[<p>本想安安静静的做一个开发攻城狮的，但事与愿违，兼职干运维。<br>身为一个Java攻城狮运维第一步必须要从装JDK开始。</p>
+<h2 id="源码包准备"><a href="#源码包准备" class="headerlink" title="源码包准备"></a>源码包准备</h2><p>首先到<a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="external">官网</a>下载jdk，我下载的是jdk-8u131-linux-x64.tar.gz，放到/usr/local/java目录下。</p>
+<h2 id="解压源码包"><a href="#解压源码包" class="headerlink" title="解压源码包"></a>解压源码包</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost java]# tar xvf jdk-8u131-linux-x64.tar.gz</div></pre></td></tr></table></figure>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost java]# vim /etc/profile</div></pre></td></tr></table></figure>
+<p>找个空白地方添加配置:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#java环境变量</div><div class="line">export JAVA_HOME=/usr/local/java/jdk1.8.0_131  </div><div class="line">export CLASSPATH=.:$JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/tools.jar  </div><div class="line">export PATH=$PATH:$JAVA_HOME/bin</div></pre></td></tr></table></figure></p>
+<p>保存退出，并运行source /etc/profile让配置生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost java]# source /etc/profile</div></pre></td></tr></table></figure></p>
+<h2 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h2><p>输入java -version 如果出现下面的结果代表安装成功了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[root@localhost java]# java -version</div><div class="line">java version &quot;1.8.0_131&quot;  </div><div class="line">Java(TM) SE Runtime Environment (build 1.8.0_131-b11)  </div><div class="line">Java HotSpot(TM) 64-Bit Server VM (build 25.131-b11, mixed mode)</div></pre></td></tr></table></figure></p>
+<h2 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h2><p>CentOS默认自带vi，功能没vim丰富，所以安装vim取代vi。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost /]# yum -y install vim-enhanced</div></pre></td></tr></table></figure></p>
+<p>最后不要忘记删除jdk源码包，占空间<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[root@localhost java]# rm jdk-8u131-linux-x64.tar.gz</div></pre></td></tr></table></figure></p>
+]]></content:encoded>
+      
+      <comments>http://www.enheng.cc/201705/CentOS%E5%AE%89%E8%A3%85JDK/#disqus_thread</comments>
     </item>
     
     <item>
@@ -30,11 +44,11 @@
       <pubDate>Sun, 09 Apr 2017 11:52:55 GMT</pubDate>
       <description>
       
-        &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;虽然Lombok也用到了注解，但是它并没有用到反射，而是通过一些奇淫巧技，在代码编译时期动态将注解替换为具体的代码。所以JVM实际运行的代码
+        &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;虽然Lombok也用到了注解，但是它并没有用到反射，而是通过一些奇淫巧技，在代码编译时期动态将注解替换为具体的代码。所以JVM实际运行的代码，和我们手动编写的包含了各种工具方法的类相同。&lt;br&gt;
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>虽然Lombok也用到了注解，但是它并没有用到反射，而是通过一些奇淫巧技，在代码编译时期动态将注解替换为具体的代码。所以JVM实际运行的代码，和我们手动编写的包含了各种工具方法的类相同。</p>
+      <content:encoded><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>虽然Lombok也用到了注解，但是它并没有用到反射，而是通过一些奇淫巧技，在代码编译时期动态将注解替换为具体的代码。所以JVM实际运行的代码，和我们手动编写的包含了各种工具方法的类相同。<br><a id="more"></a></p>
 <h2 id="注解介绍"><a href="#注解介绍" class="headerlink" title="注解介绍"></a>注解介绍</h2><ul>
 <li><a href="https://projectlombok.org/features/val.html" target="_blank" rel="external">val</a> - 终级解决方案！简化 final 局部变量定义。</li>
 <li><a href="https://projectlombok.org/features/NonNull.html" target="_blank" rel="external">@NonNull</a> - 或者：了解我是怎样停止担心并爱上 NullPointerException 的。</li>
@@ -66,11 +80,11 @@
       <pubDate>Sat, 08 Apr 2017 02:52:55 GMT</pubDate>
       <description>
       
-        &lt;h2 id=&quot;SpringBoot&quot;&gt;&lt;a href=&quot;#SpringBoot&quot; class=&quot;headerlink&quot; title=&quot;SpringBoot&quot;&gt;&lt;/a&gt;SpringBoot&lt;/h2&gt;&lt;p&gt;Spring 框架作为目前非常流行的一个 Java 应用开发框架，它所包含的
+        &lt;h2 id=&quot;SpringBoot&quot;&gt;&lt;a href=&quot;#SpringBoot&quot; class=&quot;headerlink&quot; title=&quot;SpringBoot&quot;&gt;&lt;/a&gt;SpringBoot&lt;/h2&gt;&lt;p&gt;Spring 框架作为目前非常流行的一个 Java 应用开发框架，它所包含的内容是非常繁多的。Spring 框架包含几十个不同的子项目，涵盖应用开发的不同方面。要在这些子项目之间进行选择，并快速搭建一个可以运行的应用是比较困难的事情。Spring Boot 的目的在于快速创建可以独立运行的 Spring 应用。通过 Spring Boot 可以根据相应的模板快速创建应用并运行。Spring Boot 可以自动配置 Spring 的各种组件，并不依赖代码生成和 XML 配置文件。Spring Boot 可以大大提升使用 Spring 框架时的开发效率。&lt;br&gt;
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h2><p>Spring 框架作为目前非常流行的一个 Java 应用开发框架，它所包含的内容是非常繁多的。Spring 框架包含几十个不同的子项目，涵盖应用开发的不同方面。要在这些子项目之间进行选择，并快速搭建一个可以运行的应用是比较困难的事情。Spring Boot 的目的在于快速创建可以独立运行的 Spring 应用。通过 Spring Boot 可以根据相应的模板快速创建应用并运行。Spring Boot 可以自动配置 Spring 的各种组件，并不依赖代码生成和 XML 配置文件。Spring Boot 可以大大提升使用 Spring 框架时的开发效率。</p>
+      <content:encoded><![CDATA[<h2 id="SpringBoot"><a href="#SpringBoot" class="headerlink" title="SpringBoot"></a>SpringBoot</h2><p>Spring 框架作为目前非常流行的一个 Java 应用开发框架，它所包含的内容是非常繁多的。Spring 框架包含几十个不同的子项目，涵盖应用开发的不同方面。要在这些子项目之间进行选择，并快速搭建一个可以运行的应用是比较困难的事情。Spring Boot 的目的在于快速创建可以独立运行的 Spring 应用。通过 Spring Boot 可以根据相应的模板快速创建应用并运行。Spring Boot 可以自动配置 Spring 的各种组件，并不依赖代码生成和 XML 配置文件。Spring Boot 可以大大提升使用 Spring 框架时的开发效率。<br><a id="more"></a></p>
 <h2 id="中心思想"><a href="#中心思想" class="headerlink" title="中心思想"></a>中心思想</h2><p>约定优于配置</p>
 <h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><ul>
 <li>创建独立的Spring应用程序</li>
@@ -83,7 +97,7 @@
 <h2 id="写一个HelloWorld"><a href="#写一个HelloWorld" class="headerlink" title="写一个HelloWorld"></a>写一个HelloWorld</h2><ol>
 <li>创建一个maven项目</li>
 <li><p>在pom.xml文件添加</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 </div><div class="line">		 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;com.springboot&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;springboot&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line"></div><div class="line">    &lt;parent&gt;</div><div class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</div><div class="line">        &lt;version&gt;1.5.2.RELEASE&lt;/version&gt;</div><div class="line">    &lt;/parent&gt;</div><div class="line">    &lt;dependencies&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">    &lt;/dependencies&gt;</div><div class="line">    </div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 </div><div class="line">		 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;</div><div class="line">    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;</div><div class="line"></div><div class="line">    &lt;groupId&gt;com.springboot&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;springboot&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;</div><div class="line"></div><div class="line">    &lt;parent&gt;</div><div class="line">        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">        &lt;artifactId&gt;spring-boot-starter-parent&lt;/artifactId&gt;</div><div class="line">        &lt;version&gt;1.5.3.RELEASE&lt;/version&gt;</div><div class="line">    &lt;/parent&gt;</div><div class="line">    &lt;dependencies&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">    &lt;/dependencies&gt;</div><div class="line">    </div><div class="line">&lt;/project&gt;</div></pre></td></tr></table></figure>
 </li>
 <li><p>创建程序入口</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">package com.springboot;</div><div class="line"></div><div class="line">import org.springframework.boot.SpringApplication;</div><div class="line">import org.springframework.boot.autoconfigure.SpringBootApplication;</div><div class="line">import org.springframework.web.bind.annotation.RequestMapping;</div><div class="line">import org.springframework.web.bind.annotation.RestController;</div><div class="line"></div><div class="line">@RestController</div><div class="line">@SpringBootApplication</div><div class="line">public class Application &#123;</div><div class="line"></div><div class="line">    @RequestMapping(&quot;/&quot;)</div><div class="line">    String helloWorld() &#123;</div><div class="line">        return &quot;Hello World!&quot;;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        SpringApplication.run(Application.class, args);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -103,11 +117,11 @@
       <pubDate>Sat, 18 Mar 2017 15:00:16 GMT</pubDate>
       <description>
       
-        &lt;h2 id=&quot;Why&quot;&gt;&lt;a href=&quot;#Why&quot; class=&quot;headerlink&quot; title=&quot;Why&quot;&gt;&lt;/a&gt;Why&lt;/h2&gt;&lt;p&gt;Eclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个
+        &lt;h2 id=&quot;Why&quot;&gt;&lt;a href=&quot;#Why&quot; class=&quot;headerlink&quot; title=&quot;Why&quot;&gt;&lt;/a&gt;Why&lt;/h2&gt;&lt;p&gt;Eclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。&lt;br&gt;
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p>Eclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。</p>
+      <content:encoded><![CDATA[<h2 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h2><p>Eclipse有自带Maven仓库,但它配置的国外的Maven仓库。平时下载jar包的速度实在是太慢,还经常下不成功, 所以想配一个国内的Maven库。<br><a id="more"></a></p>
 <h2 id="How"><a href="#How" class="headerlink" title="How"></a>How</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>从<a href="http://maven.apache.org/download.cgi" target="_blank" rel="external">Apache官网</a>下载最新版的Maven，并解压到安装目录。</p>
 <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>配置阿里的Maven库,</p>
 <h4 id="配置settings-xml"><a href="#配置settings-xml" class="headerlink" title="配置settings.xml"></a>配置settings.xml</h4><p>修改 conf 下的settings.xml:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">&lt;localRepository&gt;E:/Repository&lt;/localRepository&gt;</div><div class="line">&lt;profiles&gt;</div><div class="line">  &lt;profile&gt;</div><div class="line">	&lt;id&gt;Nexus aliyun&lt;/id&gt;</div><div class="line">	&lt;repositories&gt;</div><div class="line">	  &lt;repository&gt;</div><div class="line">		&lt;id&gt;Nexus aliyun&lt;/id&gt;</div><div class="line">		&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</div><div class="line">		&lt;releases&gt;</div><div class="line">		   &lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		&lt;/releases&gt;</div><div class="line">		&lt;snapshots&gt;</div><div class="line">		   &lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		&lt;/snapshots&gt;</div><div class="line">	   &lt;/repository&gt;</div><div class="line">	&lt;/repositories&gt;</div><div class="line">	&lt;pluginRepositories&gt;</div><div class="line">		&lt;pluginRepository&gt;</div><div class="line">		  &lt;id&gt;Nexus aliyun&lt;/id&gt;</div><div class="line">		  &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;</div><div class="line">		  &lt;releases&gt;</div><div class="line">			&lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		  &lt;/releases&gt;</div><div class="line">		  &lt;snapshots&gt;</div><div class="line">			&lt;enabled&gt;true&lt;/enabled&gt;</div><div class="line">		  &lt;/snapshots&gt;</div><div class="line">		&lt;/pluginRepository&gt;</div><div class="line">	&lt;/pluginRepositories&gt;</div><div class="line">  &lt;/profile&gt;</div><div class="line">&lt;/profiles&gt;</div><div class="line">&lt;activeProfiles&gt;</div><div class="line">	&lt;activeProfile&gt;Nexus aliyun&lt;/activeProfile&gt;</div><div class="line">&lt;/activeProfiles&gt;</div></pre></td></tr></table></figure></p>
