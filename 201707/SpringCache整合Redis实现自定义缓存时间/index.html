@@ -76,6 +76,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/rss2.xml" title="NYVI的博客" type="application/atom+xml" />
 
@@ -97,7 +99,7 @@ Spring 的缓存技术还具备相当的灵活性，不仅能够使用 SpEL 来�
 <meta property="og:site_name" content="NYVI的博客">
 <meta property="og:description" content="Spring Cache简介Spring3.1开始引入了的基于注释(annotation)的缓存(cache)技术，它本质上不是一个具体的缓存实现方案，而是一个对缓存使用的抽象，通过在既有代码中添加注解，即能够达到缓存方法的返回对象的效果。
 Spring 的缓存技术还具备相当的灵活性，不仅能够使用 SpEL 来定义缓存的 key 和各种 condition，还提供开箱即用的缓存临时存储方案，也支持">
-<meta property="og:updated_time" content="2017-07-02T23:29:47.791Z">
+<meta property="og:updated_time" content="2017-07-03T15:16:14.952Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SpringCache整合Redis实现自定义缓存时间">
 <meta name="twitter:description" content="Spring Cache简介Spring3.1开始引入了的基于注释(annotation)的缓存(cache)技术，它本质上不是一个具体的缓存实现方案，而是一个对缓存使用的抽象，通过在既有代码中添加注解，即能够达到缓存方法的返回对象的效果。
@@ -437,7 +439,7 @@ Spring 的缓存技术还具备相当的灵活性，不仅能够使用 SpEL 来�
         <h2 id="Spring-Cache简介"><a href="#Spring-Cache简介" class="headerlink" title="Spring Cache简介"></a>Spring Cache简介</h2><p>Spring3.1开始引入了的基于注释(annotation)的缓存(cache)技术，它本质上不是一个具体的缓存实现方案，而是一个对缓存使用的抽象，通过在既有代码中添加注解，即能够达到缓存方法的返回对象的效果。</p>
 <p>Spring 的缓存技术还具备相当的灵活性，不仅能够使用 SpEL 来定义缓存的 key 和各种 condition，还提供开箱即用的缓存临时存储方案，也支持和主流的专业缓存例如 Redis 集成。</p>
 <h3 id="Cacheable"><a href="#Cacheable" class="headerlink" title="@Cacheable"></a>@Cacheable</h3><p>这个用的比较多，用在查询方法上，先从缓存中读取，如果缓存不存在再调用该方法获取数据，然后把返回的数据添加到缓存中去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@Cacheable(value = &quot;userCache&quot;, key = &quot;targetClass + &apos;.&apos; + methodName + &apos;.&apos; + &quot;#userid&quot;)</div><div class="line">public User getEntity(long userid) &#123;</div><div class="line">  // 业务代码省略</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h3 id="CacheEvict"><a href="#CacheEvict" class="headerlink" title="@CacheEvict"></a>@CacheEvict</h3><p>清楚缓存<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@CacheEvict(value = &quot;userCache&quot;, key = &quot;targetClass + &apos;.&apos; + methodName + &apos;.&apos; + &quot;#userid&quot;)</div><div class="line">public boolean delete(long userid) &#123;</div><div class="line">  // 业务代码省略</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="CacheEvict"><a href="#CacheEvict" class="headerlink" title="@CacheEvict"></a>@CacheEvict</h3><p>清空缓存<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@CacheEvict(value = &quot;userCache&quot;, key = &quot;targetClass + &apos;.&apos; + methodName + &apos;.&apos; + &quot;#userid&quot;)</div><div class="line">public boolean delete(long userid) &#123;</div><div class="line">  // 业务代码省略</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <h3 id="CachePut"><a href="#CachePut" class="headerlink" title="@CachePut"></a>@CachePut</h3><p>这个注释可以确保方法被执行，同时方法的返回值也被记录到缓存中，实现缓存与数据库的同步更新。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">@CachePut(value = &quot;userCache&quot;, key = &quot;targetClass + &apos;.&apos; + methodName + &apos;.&apos; + &quot;#user.getUserid&quot;)</div><div class="line">public User save(User user) &#123;</div><div class="line">  // 业务代码省略</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>注：每个注解都有多个参数，这里不一一列出，建议进入源码查看注释。</p>
 <h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><p>虽然Spring Cache用起来很方便的, 但不支持设置动态过期时间,这里需要重写RedisCacheManager的一些方法。</p>
